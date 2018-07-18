@@ -21,7 +21,7 @@ public class Adresse {
 	
 	
 
-	private String numRue;
+	private String numRue ;
 	private String nomRue;
 	private String codePostale;
 	private String ville;
