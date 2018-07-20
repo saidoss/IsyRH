@@ -15,7 +15,7 @@ public class Adresse {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int IdAdress;
+	private int IdAdress ;
 	
 	
 	
