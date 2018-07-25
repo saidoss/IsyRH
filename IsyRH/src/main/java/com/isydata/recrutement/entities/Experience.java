@@ -17,7 +17,7 @@ public class Experience {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idExperience;
 	private String nomEntreprise;
-	private String duréeMission;
+	private String dureeMission;
 	private String description;
 	
 	
@@ -25,12 +25,12 @@ public class Experience {
 	private Collection<CV_Exp> cv_Exps;
 	
 	
-	public Experience(int idExperience, String nomEntreprise, String duréeMission, String description,
+	public Experience(int idExperience, String nomEntreprise, String dureeMission, String description,
 			Collection<CV_Exp> cv_Exps) {
 		super();
 		this.idExperience = idExperience;
 		this.nomEntreprise = nomEntreprise;
-		this.duréeMission = duréeMission;
+		this.dureeMission = dureeMission;
 		this.description = description;
 		this.cv_Exps = cv_Exps;
 	}
@@ -62,13 +62,13 @@ public class Experience {
 	}
 
 
-	public String getDuréeMission() {
-		return duréeMission;
+	public String getdureeMission() {
+		return dureeMission;
 	}
 
 
-	public void setDuréeMission(String duréeMission) {
-		this.duréeMission = duréeMission;
+	public void setdureeMission(String dureeMission) {
+		this.dureeMission = dureeMission;
 	}
 
 

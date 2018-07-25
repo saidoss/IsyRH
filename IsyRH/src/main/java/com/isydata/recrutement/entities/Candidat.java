@@ -22,8 +22,8 @@ public class Candidat {
 	private String prenom;
 	private String tel;
 	private String email;
-	private String disponibilité;
-	private String mobilité;
+	private String disponibilite;
+	private String mobilite;
 	private String permis;
 	
 	@ManyToOne
@@ -37,16 +37,16 @@ public class Candidat {
 	
 	
 
-	public Candidat(int idCandidat, String nom, String prenom, String tel, String email, String disponibilité,
-			String mobilité, String permis, Adresse adresse, Collection<CV> cvs) {
+	public Candidat(int idCandidat, String nom, String prenom, String tel, String email, String disponibilite,
+			String mobilite, String permis, Adresse adresse, Collection<CV> cvs) {
 		super();
 		this.idCandidat = idCandidat;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.tel = tel;
 		this.email = email;
-		this.disponibilité = disponibilité;
-		this.mobilité = mobilité;
+		this.disponibilite = disponibilite;
+		this.mobilite = mobilite;
 		this.permis = permis;
 		this.adresse = adresse;
 		this.cvs = cvs;
@@ -125,20 +125,20 @@ public class Candidat {
 		this.email = email;
 	}
 
-	public String getDisponibilité() {
-		return disponibilité;
+	public String getdisponibilite() {
+		return disponibilite;
 	}
 
-	public void setDisponibilité(String disponibilité) {
-		this.disponibilité = disponibilité;
+	public void setdisponibilite(String disponibilite) {
+		this.disponibilite = disponibilite;
 	}
 
-	public String getMobilité() {
-		return mobilité;
+	public String getmobilite() {
+		return mobilite;
 	}
 
-	public void setMobilité(String mobilité) {
-		this.mobilité = mobilité;
+	public void setmobilite(String mobilite) {
+		this.mobilite = mobilite;
 	}
 
 	public String getPermis() {
