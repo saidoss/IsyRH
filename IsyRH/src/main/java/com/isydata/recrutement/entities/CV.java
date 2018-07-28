@@ -29,10 +29,12 @@ public class CV {
 	private String observation;
 	private boolean entretien; 
 
+	
 	@ManyToOne
 	@JoinColumn(name="idCandidat")
 	private Candidat candidat;
 	
+
 	@ManyToMany
     @JoinTable(name="cv_experience",
     joinColumns={@JoinColumn(name="idCv", referencedColumnName="idCv")},
@@ -50,6 +52,7 @@ public class CV {
 		// TODO Auto-generated constructor stub
 	}
 
+	
 	
 
 	public CV(String titreIsyData, String titreCandidat, String siteSource, int flag, String observation,

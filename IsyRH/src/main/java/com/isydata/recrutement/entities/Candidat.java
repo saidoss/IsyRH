@@ -38,7 +38,6 @@ public class Candidat {
 		// TODO Auto-generated constructor stub
 	}
 
-	
 	public Candidat(String nom, String prenom, String tel, String email, String disponibilite, String mobilite,
 			String permis, Adresse adresse) {
 		super();
@@ -51,7 +50,6 @@ public class Candidat {
 		this.permis = permis;
 		this.adresse = adresse;
 	}
-
 
 	public int getIdCandidat() {
 		return idCandidat;
@@ -132,9 +130,6 @@ public class Candidat {
 	public void setCvs(Collection<CV> cvs) {
 		this.cvs = cvs;
 	}
-	
-	
-	
-	
-	
+
+
 }
