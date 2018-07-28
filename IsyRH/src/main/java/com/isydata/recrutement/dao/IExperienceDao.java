@@ -7,7 +7,7 @@ import com.isydata.recrutement.entities.Experience;
 
 public interface IExperienceDao {
 
-	public void AjouterExperience(Experience experience);
+	public void ajouterExperience(Experience experience);
 	public void updateExperience(Experience experience);
 	public List<Experience> listExperience();
 	public Experience getExperienceById(int id);

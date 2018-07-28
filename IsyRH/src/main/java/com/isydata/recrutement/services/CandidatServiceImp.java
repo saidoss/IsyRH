@@ -20,8 +20,8 @@ public class CandidatServiceImp implements ICandidatService{
 	}
 	@Transactional
 	@Override
-	public void AjouterCandidat(Candidat candidat) {
-		this.candidatDao.AjouterCandidat(candidat);
+	public void ajouterCandidat(Candidat candidat) {
+		this.candidatDao.ajouterCandidat(candidat);
 	}
 	@Transactional
 	@Override

@@ -2,11 +2,16 @@ package com.isydata.recrutement.entities;
 
 import java.util.Collection;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Experience {
@@ -17,29 +22,35 @@ public class Experience {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idExperience;
 	private String nomEntreprise;
-	private String duréeMission;
+	private String dureeMission;
 	private String description;
 	
 	
-	@OneToMany(mappedBy="experience")
-	private Collection<CV_Exp> cv_Exps;
-	
-	
-	public Experience(int idExperience, String nomEntreprise, String duréeMission, String description,
-			Collection<CV_Exp> cv_Exps) {
-		super();
-		this.idExperience = idExperience;
-		this.nomEntreprise = nomEntreprise;
-		this.duréeMission = duréeMission;
-		this.description = description;
-		this.cv_Exps = cv_Exps;
-	}
+	@ManyToMany
+    @JoinTable(name="cv_experience",
+    joinColumns={@JoinColumn(name="idExperience", referencedColumnName="idExperience")},
+    inverseJoinColumns={@JoinColumn(name="idCv", referencedColumnName="idCv")})
+	private Collection<CV> cvs;
 
 
 	public Experience() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
+
+	
+
+
+	public Experience(String nomEntreprise, String dureeMission, String description) {
+		super();
+		this.nomEntreprise = nomEntreprise;
+		this.dureeMission = dureeMission;
+		this.description = description;
+	}
+
+
+
 
 
 	public int getIdExperience() {
@@ -62,13 +73,13 @@ public class Experience {
 	}
 
 
-	public String getDuréeMission() {
-		return duréeMission;
+	public String getDureeMission() {
+		return dureeMission;
 	}
 
 
-	public void setDuréeMission(String duréeMission) {
-		this.duréeMission = duréeMission;
+	public void setDureeMission(String dureeMission) {
+		this.dureeMission = dureeMission;
 	}
 
 
@@ -82,15 +93,16 @@ public class Experience {
 	}
 
 
-	public Collection<CV_Exp> getCv_Exps() {
-		return cv_Exps;
+	public Collection<CV> getCvs() {
+		return cvs;
 	}
 
 
-	public void setCv_Exps(Collection<CV_Exp> cv_Exps) {
-		this.cv_Exps = cv_Exps;
+	public void setCvs(Collection<CV> cvs) {
+		this.cvs = cvs;
 	}
-	
+
+
 	
 	
 }

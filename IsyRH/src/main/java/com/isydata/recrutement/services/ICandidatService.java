@@ -5,7 +5,7 @@ import com.isydata.recrutement.entities.Candidat;
 
 public interface ICandidatService {
 
-	public void AjouterCandidat(Candidat candidat);
+	public void ajouterCandidat(Candidat candidat);
 	public void updateCandidat(Candidat candidat);
 	public List<Candidat> listCandidat();
 	public Candidat getCandidatById(int id);

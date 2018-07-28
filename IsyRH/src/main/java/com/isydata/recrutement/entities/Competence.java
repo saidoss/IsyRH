@@ -2,13 +2,17 @@ package com.isydata.recrutement.entities;
 
 import java.util.Collection;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+
+import javax.persistence.OneToOne;
 
 @Entity
 public class Competence {
@@ -17,76 +21,62 @@ public class Competence {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idCompetence;
 	private String competence;
-	private String langue;
-	
-	
 	@ManyToOne
 	@JoinColumn(name="idCategorie")
-	private CategorieComp categorieComp;
+	private CategorieCompetence categorieComp;
 	
-	@OneToMany(mappedBy="competence")
-	private Collection<CV_Comp> cv_Comps;
-	
-	
-
-
-
-	public Competence(int idCompetence, String competence, String langue, CategorieComp categorieComp) {
-		super();
-		this.idCompetence = idCompetence;
-		this.competence = competence;
-		this.langue = langue;
-		this.categorieComp = categorieComp;
-	}
-
-
-	public Competence() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-
-	public CategorieComp getCategorieComp() {
-		return categorieComp;
-	}
-
-
-	public void setCategorieComp(CategorieComp categorieComp) {
-		this.categorieComp = categorieComp;
-	}
-
+	@ManyToMany
+    @JoinTable(name="cv_competence",
+    joinColumns={@JoinColumn(name="idCompetence", referencedColumnName="idCompetence")},
+    inverseJoinColumns={@JoinColumn(name="idCv", referencedColumnName="idCv")})
+	private Collection<CV> cvs;
 
 	public int getIdCompetence() {
 		return idCompetence;
 	}
 
-
 	public void setIdCompetence(int idCompetence) {
 		this.idCompetence = idCompetence;
 	}
-
 
 	public String getCompetence() {
 		return competence;
 	}
 
-
 	public void setCompetence(String competence) {
 		this.competence = competence;
 	}
 
-
-	public String getLangue() {
-		return langue;
+	public CategorieCompetence getCategorieComp() {
+		return categorieComp;
 	}
 
+	public void setCategorieComp(CategorieCompetence categorieComp) {
+		this.categorieComp = categorieComp;
+	}
 
-	public void setLangue(String langue) {
-		this.langue = langue;
+	public Collection<CV> getCvs() {
+		return cvs;
+	}
+
+	public void setCvs(Collection<CV> cvs) {
+		this.cvs = cvs;
+	}
+
+	public Competence(String competence, CategorieCompetence categorieComp) {
+		super();
+		this.competence = competence;
+		this.categorieComp = categorieComp;
+	}
+
+	public Competence() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	
+
 	
-	
+
 	
 	
 }

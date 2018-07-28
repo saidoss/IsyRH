@@ -19,7 +19,7 @@ public class CompetenceDaoImp implements ICompetenceDao {
 	}
 	
 	@Override
-	public void AjouterCompetence(Competence competence) {
+	public void ajouterCompetence(Competence competence) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.persist(competence);
 	}

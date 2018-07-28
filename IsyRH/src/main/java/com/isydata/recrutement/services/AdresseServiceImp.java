@@ -22,8 +22,8 @@ public class AdresseServiceImp implements IAdresseService {
 	
 	@Override
 	@Transactional
-	public void AjouterAdresse(Adresse adr) {
-		this.adresseDao.AjouterAdresse(adr);
+	public void ajouterAdresse(Adresse adr) {
+		this.adresseDao.ajouterAdresse(adr);
 		
 	}
 	

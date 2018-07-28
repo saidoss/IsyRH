@@ -7,7 +7,7 @@ import com.isydata.recrutement.entities.Utilisateur;
 
 
 public interface IUtilisateurDao {
-	public void AjouterUtilisateur(Utilisateur user);
+	public void ajouterUtilisateur(Utilisateur user);
 	public void updateUtilisateur(Utilisateur user);
 	public List<Utilisateur> listUtilisateur();
 	public Utilisateur getUtilisateurById(int id);

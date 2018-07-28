@@ -22,8 +22,8 @@ public class Candidat {
 	private String prenom;
 	private String tel;
 	private String email;
-	private String disponibilité;
-	private String mobilité;
+	private String disponibilite;
+	private String mobilite;
 	private String permis;
 	
 	@ManyToOne
@@ -32,57 +32,25 @@ public class Candidat {
 	
 	@OneToMany (mappedBy ="candidat" )
 	private Collection <CV> cvs;
-	
-	
-	
-	
-
-	public Candidat(int idCandidat, String nom, String prenom, String tel, String email, String disponibilité,
-			String mobilité, String permis, Adresse adresse, Collection<CV> cvs) {
-		super();
-		this.idCandidat = idCandidat;
-		this.nom = nom;
-		this.prenom = prenom;
-		this.tel = tel;
-		this.email = email;
-		this.disponibilité = disponibilité;
-		this.mobilité = mobilité;
-		this.permis = permis;
-		this.adresse = adresse;
-		this.cvs = cvs;
-	}
-	
-	
-
-	public Adresse getAdresse() {
-		return adresse;
-	}
-
-
-
-	public void setAdresse(Adresse adresse) {
-		this.adresse = adresse;
-	}
-
-
-
-	public Collection<CV> getCvs() {
-		return cvs;
-	}
-
-
-
-	public void setCvs(Collection<CV> cvs) {
-		this.cvs = cvs;
-	}
-
-
 
 	public Candidat() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	public Candidat(String nom, String prenom, String tel, String email, String disponibilite, String mobilite,
+			String permis, Adresse adresse) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.tel = tel;
+		this.email = email;
+		this.disponibilite = disponibilite;
+		this.mobilite = mobilite;
+		this.permis = permis;
+		this.adresse = adresse;
+	}
 
 
 	public int getIdCandidat() {
@@ -125,20 +93,20 @@ public class Candidat {
 		this.email = email;
 	}
 
-	public String getDisponibilité() {
-		return disponibilité;
+	public String getDisponibilite() {
+		return disponibilite;
 	}
 
-	public void setDisponibilité(String disponibilité) {
-		this.disponibilité = disponibilité;
+	public void setDisponibilite(String disponibilite) {
+		this.disponibilite = disponibilite;
 	}
 
-	public String getMobilité() {
-		return mobilité;
+	public String getMobilite() {
+		return mobilite;
 	}
 
-	public void setMobilité(String mobilité) {
-		this.mobilité = mobilité;
+	public void setMobilite(String mobilite) {
+		this.mobilite = mobilite;
 	}
 
 	public String getPermis() {
@@ -148,6 +116,25 @@ public class Candidat {
 	public void setPermis(String permis) {
 		this.permis = permis;
 	}
+
+	public Adresse getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(Adresse adresse) {
+		this.adresse = adresse;
+	}
+
+	public Collection<CV> getCvs() {
+		return cvs;
+	}
+
+	public void setCvs(Collection<CV> cvs) {
+		this.cvs = cvs;
+	}
+	
+	
+	
 	
 	
 }

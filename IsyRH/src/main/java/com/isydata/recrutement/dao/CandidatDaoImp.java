@@ -23,7 +23,7 @@ public class CandidatDaoImp implements ICandidatDao {
 	
 	
 	@Override
-	public void AjouterCandidat(Candidat candidat) {
+	public void ajouterCandidat(Candidat candidat) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.persist(candidat);
 		
@@ -39,8 +39,8 @@ public class CandidatDaoImp implements ICandidatDao {
 	@Override
 	public List<Candidat> listCandidat() {
 		Session session = this.sessionFactory.getCurrentSession();
-		List<Candidat> CandidatList = session.createQuery("select c from Candidat c").list();
-		return CandidatList;
+		List<Candidat> candidatList = session.createQuery("select c from Candidat c").list();
+		return candidatList;
 	}
 
 	@Override

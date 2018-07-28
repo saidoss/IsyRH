@@ -3,11 +3,13 @@ package com.isydata.recrutement.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.isydata.recrutement.dao.IExperienceDao;
 import com.isydata.recrutement.entities.Experience;
 
+@Service
 public class ExperienceServiceImp implements IExperienceService {
 
 	@Autowired
@@ -20,8 +22,8 @@ public class ExperienceServiceImp implements IExperienceService {
 	
 	@Override
 	@Transactional
-	public void AjouterExperience(Experience experience) {
-		this.experienceDao.AjouterExperience(experience);
+	public void ajouterExperience(Experience experience) {
+		this.experienceDao.ajouterExperience(experience);
 		
 	}
 

@@ -35,7 +35,7 @@
 		<beans:property name="url"
 			value="jdbc:mysql://localhost:3306/isydatarh" />
 		<beans:property name="username" value="root" />
-		<beans:property name="password" value="root" />
+		<beans:property name="password" value="" />
 	</beans:bean>
 	
 
@@ -49,8 +49,10 @@
 				<beans:value>com.isydata.recrutement.entities.Candidat</beans:value>
 				<beans:value>com.isydata.recrutement.entities.CategorieComp</beans:value>
 				<beans:value>com.isydata.recrutement.entities.Competence</beans:value>
-				<beans:value>com.isydata.recrutement.entities.CV_Comp</beans:value>
-				<beans:value>com.isydata.recrutement.entities.CV_Exp</beans:value>
+<beans:value>com.isydata.recrutement.entities.CV_Comp</beans:value>
+<beans:value>com.isydata.recrutement.entities.CV_Exp</beans:value>
+				
+				
 				<beans:value>com.isydata.recrutement.entities.CV</beans:value>
 				<beans:value>com.isydata.recrutement.entities.Experience</beans:value>
 				<beans:value>com.isydata.recrutement.entities.Utilisateur</beans:value>

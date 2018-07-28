@@ -20,7 +20,7 @@ public class CvDaoImp implements ICvDao {
 		this.sessionFactory = sf;
 	}
 	@Override
-	public void AjouterCv(CV cv) {
+	public void ajouterCv(CV cv) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.persist(cv);
 	}

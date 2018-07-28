@@ -19,7 +19,7 @@ public class UtilisateurDaoImp implements IUtilisateurDao {
 		this.sessionFactory = sf;
 	}
 	@Override
-	public void AjouterUtilisateur(Utilisateur user) {
+	public void ajouterUtilisateur(Utilisateur user) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.persist(user);
 	

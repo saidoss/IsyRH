@@ -3,11 +3,13 @@ package com.isydata.recrutement.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.isydata.recrutement.dao.ICvDao;
 import com.isydata.recrutement.entities.CV;
 
+@Service
 public class CvServiceImp implements ICvService {
 
 	@Autowired
@@ -18,8 +20,8 @@ public class CvServiceImp implements ICvService {
 	}
 	@Override
 	@Transactional
-	public void AjouterCv(CV cv) {
-		this.cvDao.AjouterCv(cv);
+	public void ajouterCv(CV cv) {
+		this.cvDao.ajouterCv(cv);
 		
 	}
 	@Override

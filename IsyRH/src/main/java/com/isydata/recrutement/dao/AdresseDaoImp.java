@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import javax.persistence.Query;
 
+
 import com.isydata.recrutement.entities.Adresse;
 
 @Repository
@@ -21,15 +22,15 @@ public class AdresseDaoImp implements IAdresseDao {
 	}
 		
 	@Override
-	public void AjouterAdresse(Adresse adr) {
+	public void ajouterAdresse(Adresse adresse) {
 		Session session = this.sessionFactory.getCurrentSession();
-		session.persist(adr);
+		session.persist(adresse);
 	}
 
 	@Override
-	public void updateAdresse(Adresse adr) {
+	public void updateAdresse(Adresse adresse) {
 		Session session = this.sessionFactory.getCurrentSession();
-		session.update(adr);
+		session.update(adresse);
 		
 	}
 
@@ -37,25 +38,25 @@ public class AdresseDaoImp implements IAdresseDao {
 	public List<Adresse> listAdresse() {
 		Session session = this.sessionFactory.getCurrentSession();
 		String hql="select a  from Adresse a";
-		List<Adresse> AdresseList= session.createQuery(hql).list();
+		List<Adresse> adresseList= session.createQuery(hql).list();
 		
-		return AdresseList;
+		return adresseList;
 	
 	}
 
 	@Override
 	public Adresse getAdresseById(int id) {
 		Session session = this.sessionFactory.getCurrentSession();		
-		Adresse adr = (Adresse) session.load(Adresse.class, new Integer(id));
-		return adr;
+		Adresse adresse = (Adresse) session.load(Adresse.class, new Integer(id));
+		return adresse;
 	}
 
 	@Override
 	public void removeAdresse(int id) {
 		Session session = this.sessionFactory.getCurrentSession();
-		Adresse adr = (Adresse) session.load(Adresse.class, new Integer(id));
-		if(null != adr){
-			session.delete(adr);
+		Adresse adresse = (Adresse) session.load(Adresse.class, new Integer(id));
+		if(null != adresse){
+			session.delete(adresse);
 		}
 	}
 }

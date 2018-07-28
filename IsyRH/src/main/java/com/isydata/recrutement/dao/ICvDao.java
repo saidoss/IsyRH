@@ -7,7 +7,7 @@ import com.isydata.recrutement.entities.CV;
 
 public interface ICvDao {
 
-	public void AjouterCv(CV cv);
+	public void ajouterCv(CV cv);
 	public void updateCv(CV cv);
 	public List<CV> listCv();
 	public CV getCvById(int id);

@@ -3,11 +3,12 @@ package com.isydata.recrutement.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.isydata.recrutement.dao.ICompetenceDao;
 import com.isydata.recrutement.entities.Competence;
-
+@Service
 public class CompetenceServiceImp implements ICompetenceService {
 
 	@Autowired
@@ -19,8 +20,8 @@ public class CompetenceServiceImp implements ICompetenceService {
 	}
 	@Transactional
 	@Override
-	public void AjouterCompetence(Competence competence) {
-		this.competenceDao.AjouterCompetence(competence);
+	public void ajouterCompetence(Competence competence) {
+		this.competenceDao.ajouterCompetence(competence);
 		
 	}
 	@Transactional

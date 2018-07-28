@@ -29,43 +29,6 @@ public class Adresse {
 	@OneToMany (mappedBy ="adresse")
 	private Collection <Candidat> candidats;
 
-	
-	
-
-	public Adresse(int idAdress, String numRue, String nomRue, String codePostale, String ville,
-			Collection<Candidat> candidats) {
-		super();
-		IdAdress = idAdress;
-		this.numRue = numRue;
-		this.nomRue = nomRue;
-		this.codePostale = codePostale;
-		this.ville = ville;
-		this.candidats = candidats;
-	}
-	
-	
-
-	public Collection<Candidat> getCandidats() {
-		return candidats;
-	}
-
-
-
-	public void setCandidats(Collection<Candidat> candidats) {
-		this.candidats = candidats;
-	}
-
-
-
-	
-
-	public Adresse() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-
-
 	public int getIdAdress() {
 		return IdAdress;
 	}
@@ -105,6 +68,28 @@ public class Adresse {
 	public void setVille(String ville) {
 		this.ville = ville;
 	}
+
+	public Collection<Candidat> getCandidats() {
+		return candidats;
+	}
+
+	public void setCandidats(Collection<Candidat> candidats) {
+		this.candidats = candidats;
+	}
+
+	public Adresse() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Adresse(String numRue, String nomRue, String codePostale, String ville) {
+		super();
+		this.numRue = numRue;
+		this.nomRue = nomRue;
+		this.codePostale = codePostale;
+		this.ville = ville;
+	}
+
 	
 	
 	
