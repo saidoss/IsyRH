@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.isydata.recrutement.entities.Candidat;
 
 
+
 @Repository
 public class CandidatDaoImp implements ICandidatDao {
 
