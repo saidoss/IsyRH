@@ -18,6 +18,10 @@ public class Experience {
 
 	
 
+	
+	
+	
+	
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idExperience;
