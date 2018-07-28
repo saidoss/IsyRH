@@ -23,7 +23,7 @@ public class Experience {
 	private int idExperience;
 	private String nomEntreprise;
 	private String dureeMission;
-	private String description;
+	private String description ;
 	
 	
 	@ManyToMany
