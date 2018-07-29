@@ -22,6 +22,7 @@ public class Candidat {
 	private String prenom;
 	private String tel;
 	private String email;
+	private String niveauFormation;
 	private String disponibilite;
 	private String mobilite;
 	private String permis;
@@ -38,17 +39,27 @@ public class Candidat {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Candidat(String nom, String prenom, String tel, String email, String disponibilite, String mobilite,
+	public Candidat(String nom, String prenom, String tel, String email,String niveauFormation, String disponibilite, String mobilite,
 			String permis, Adresse adresse) {
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
 		this.tel = tel;
 		this.email = email;
+		this.niveauFormation = niveauFormation;
 		this.disponibilite = disponibilite;
 		this.mobilite = mobilite;
 		this.permis = permis;
 		this.adresse = adresse;
+	}
+
+	
+	public String getNiveauFormation() {
+		return niveauFormation;
+	}
+
+	public void setNiveauFormation(String niveauFormation) {
+		this.niveauFormation = niveauFormation;
 	}
 
 	public int getIdCandidat() {
