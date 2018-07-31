@@ -35,7 +35,7 @@ public class CvDaoImp implements ICvDao {
 	@Override
 	public List<CV> listCv(int idflag) {
 		Session session = this.sessionFactory.getCurrentSession();
-		String hql="select c  from CV c";
+		String hql="select c from CV c ";
 		List<CV> CvList= session.createQuery(hql).list();
 		
 		return CvList;
